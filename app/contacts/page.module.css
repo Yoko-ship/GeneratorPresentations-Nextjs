@@ -1,0 +1,11 @@
+.contacts{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+}
+.contacts div{
+    padding: 10px;
+    font-size: 20px;
+}
