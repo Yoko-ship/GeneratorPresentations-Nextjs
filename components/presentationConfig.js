@@ -22,7 +22,8 @@ export function SlideConfig(x, y, fontSize, pres) {
 }
 export function ImageConfig(path){
     return{
-        path:path,
+        data:path,
+        type:"png",
           x: 2.5,
           y: 3.5,
           w: 4,
