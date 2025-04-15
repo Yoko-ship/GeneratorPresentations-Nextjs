@@ -5,7 +5,7 @@ import Names from "./Names";
 import { cardOptions } from "./options";
 import { textManners } from "./options";
 import "@/css/create_page.css";
-import WritePrompt from "@/lib/action";
+import WritePrompt from "@/lib/test";
 import Presentation from "./Presentation";
 import { getAuthToken, tokenLoader} from "@/lib/auth";
 import Link from "next/link";
