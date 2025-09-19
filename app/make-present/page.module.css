@@ -12,7 +12,7 @@
     font-size: 25px;
     padding: 10px;
     text-align: center;
-    color: #3b3b3b;
+    color: white;
 }
 .information{
     padding-top: 25px;
@@ -20,48 +20,51 @@
     color: white;
 }
 
-.input-div{
+.input_div{
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 98%;
+    width: 100%;
     display: flex;
-    margin-left: 20px;
-}
-.input-div input{
-    padding: 15px;
-    width: 90%;
-    outline: none;
-    border: 3px solid #ccc;
+    border: 1px solid #303030;
     border-radius: 10px;
-    font-size: 20px;
+}
+.input_div input{
+    padding: 15px;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.3rem;
+    background-color: #303030;
+    color: white;
     
 }
-.div-btn button{
+.input_div button{
     padding: 17px;
     border: none;
-    background-color: green;
-    color: white;
     cursor: pointer;
-    border-radius: 10px;
+
     font-size: 18px;
+    background-color: #3D3D3D;
+    color: white; 
 }
 
-.div-btn button:hover{
+.input button:hover{
     filter: brightness(115%);
 }
-.select-div{
+.select_div{
     display: flex;
     justify-content: center;
-    padding: 15px;
+    margin: 1rem 0;
     gap: 10px;
+    width: 100%;
 }
 
-.select-div select{
-    padding: 10px;
+.select_div select{
+    padding: 0.8rem;
     outline: none;
     border-radius: 10px;
-    width: 200px;
+    width: 100%;
 }
 
 
@@ -157,7 +160,9 @@
 }
 .dowload h2{
     text-align: center;
-    padding: 10px;
+    padding: 0.8rem;
+    color: white;
+    font-size: 2rem;
 }
 .btns{
     display: flex;
@@ -190,7 +195,7 @@
     text-align: center;
     font-size: 20px;
 }
-.errors a,p{
+.errors a,.errors p{
     text-decoration: none;
     color: red;
 }
@@ -205,19 +210,11 @@
         display: none;
     }
 
-    .input-div{
-        width: 90%;
-        display: flex;
-    }
-    .input-div input{
+
+    .input_div input{
         padding: 10px;
         width: 100%;
         font-size: 16px;
-    }
-    .div-btn{
-        display: flex;
-        justify-content: center;
-        align-items: end;
     }
     .names{
         display: flex;
@@ -226,12 +223,6 @@
         flex-direction: column;
         align-items: center;
     }
-    .select-div select{
-        width: 100px;
-    }
-    .select-div select option{
-        width: 100px;
-    }
     .dowload button{
         width: 25%;
     }
@@ -239,24 +230,36 @@
 
 }
 
+@media screen and (max-width:960px) {
+    .select_div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 1rem 0;
+    }
+    .select_div select{
+        width: 100%;
+    }
+}
 
 @media screen and (min-width:600px) and (max-width:950px) {
     .examples{
         display: grid;
         grid-template-columns: repeat(3,1fr);
     }
-    .select-div select{
-        width: 100px;
+    .select_div select{
+        width: 100%;
     }
 }
 @media screen and (min-width:1100px) {
-    .input-div input{
+    .input_div input{
         font-size: 22px;
     }
-    .select-div{
+    .select_div{
         font-size: 22px;
     }
-    .div-btn button{
+    .div_btn button{
         font-size: 22px;
     }
 }

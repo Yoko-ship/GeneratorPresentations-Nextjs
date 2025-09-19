@@ -1,7 +1,7 @@
 import React from "react";
 import PptxGenJS from "pptxgenjs";
 import Button from "./Button";
-import "@/css/create_page.css";
+import classes from "@/app/make-present/page.module.css"
 import { getRandomImages } from "./presentationConfig";
 import { SlideConfig } from "./presentationConfig";
 import { ImageConfig } from "./presentationConfig";
@@ -52,11 +52,11 @@ function Presentation({ state }) {
         action={async () => {
           await new Promise((res) => setTimeout(res, 1000));
         }}
-        className="dowload"
+        className={classes.dowload}
       >
         <h2>Ваш слайд готов</h2>
-        <div className="btns">
-          <button className="back" onClick={backHandler} type="button">
+        <div className={classes.btns}>
+          <button className={classes.back} onClick={backHandler} type="button">
             Назад
           </button>
           <Button dowload={dowload} />

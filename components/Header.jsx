@@ -1,17 +1,20 @@
 import Profile from "./Profile";
 import Link from "next/link";
+import classes from "@/app/page.module.css"
+
 function Header() {
   return (
-    <header>
+    <header className={classes.header}>
       <nav>
         <ul>
-          <li>
-            <Link href="/">Создать презентацию</Link>
-          </li>
-          <li>
-            <Link href="/contacts">Контакты</Link>
-          </li>
-          <Profile/>
+          <div className={classes.logo}>
+            <li><Link href="/">PRESENT MAKER</Link></li>
+          </div>
+          <div className={classes.info_part}>
+            <li><Link href="/">Главное Меню</Link></li>
+            <li><Link href="/">О нас</Link></li>
+            <li className={classes.auth}><Link href="/">Войти</Link></li>
+          </div>
         </ul>
       </nav>
     </header>

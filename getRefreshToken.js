@@ -1,10 +1,11 @@
 const { google } = require("googleapis");
 const readline = require("readline");
+require("dotenv").config()
 
 
-const CLIENT_ID = ""
-const CLIENT_SECRET = ""
-const REDIRECT_URI = ""; 
+const CLIENT_ID = process.env.NEXT_PUBLIC_CLIENT_ID
+const CLIENT_SECRET = process.env.NEXT_PUBLIC_CLIENT_SECRET
+const REDIRECT_URI = process.env.NEXT_PUBLIC_REDIRECT_URI; 
 
 
 const oAuth2Client = new google.auth.OAuth2(

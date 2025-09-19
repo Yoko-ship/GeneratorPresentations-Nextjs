@@ -1,0 +1,108 @@
+.header{
+    padding: 30px;
+  }
+.header ul{
+    display: flex;
+
+}
+
+.logo li{
+    color: white;
+    list-style: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.logo li a{
+    text-decoration: none;
+    color: white;
+}
+.logo li:hover,.info_part li:hover{
+    transform: scale(1.1);
+}
+.info_part{
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    gap: 4rem;
+}
+.info_part li{
+    list-style: none;
+    font-size: 1.5rem;
+}
+.info_part a{
+    text-decoration: none;
+    color: white;
+}
+.auth a{
+    color: #B3D73B;
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+    height: 80vh;
+    align-items: center;
+}
+.left h1{
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.right span{
+    font-size: 2rem;
+    color: white;
+}
+.buttons{
+    margin-top: 2rem;
+}
+.buttons button{
+    margin-left: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #5939CA;
+    color: white;
+    width: 20%;
+}
+
+.buttons button a{
+    text-decoration: none;
+    color: white;
+
+}
+
+@media screen and  (max-width:700px) {
+    .header ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .info_part{
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .left h1,.right span{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .buttons button{
+        padding: 0.4rem;
+    }
+
+}

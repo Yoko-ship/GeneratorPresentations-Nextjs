@@ -1,58 +1,60 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@93.7,386&display=swap');
+
+* {
   margin: 0;
   padding: 0;
 }
 
-header{
-  padding: 30px;
-  background-color: #F7F3F2;
-}
-header ul{
-  display: flex;
-  justify-content: space-around;
-}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 386;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 93.7;
+    background: linear-gradient(
+      90deg,
+      rgba(10, 10, 15, 0.95) 0%,    
+      rgba(25, 15, 40, 0.9) 25%,    
+      rgba(50, 25, 80, 0.85) 50%,   /* фиолетовый акцент */
+      rgba(25, 15, 40, 0.9) 75%,    
+      rgba(10, 10, 15, 0.95) 100%
+    );
 
-header a{
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-header li{
-  list-style: none;
-  color: black;
-  font-size: 18px;
-  cursor: pointer;
 
-}
-header li:hover{
-  transform: scale(1.1);
 }
 
 
-.error{
+
+
+.error {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 500px;
   flex-direction: column;
 }
-.error h2{
+
+.error h2 {
   color: red;
 }
-.error li{
+
+.error li {
   color: rgb(128, 7, 61);
   font-size: 18px;
 }
 
-.hint{
+.hint {
   padding: 15px;
   margin: 10px;
 }
-.hint a{
+
+.hint a {
   text-decoration: none;
   color: rgba(104, 59, 59, 0.945);
   font-size: 20px;
 }
-.link:hover{
+
+.link:hover {
   color: black;
 }

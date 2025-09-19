@@ -4,48 +4,29 @@ import { useState } from "react";
 import Names from "./Names";
 import { cardOptions } from "./options";
 import { textManners } from "./options";
-import "@/css/create_page.css";
+import classes from "@/app/make-present/page.module.css";
 import WritePrompt from "@/lib/presentHanlder";
 import Presentation from "./Presentation";
-import { getAuthToken, tokenLoader} from "@/lib/auth";
-import Link from "next/link";
 function CreatePage() {
   const [state, formAction, isPending] = useActionState(WritePrompt, null);
-  const [token, setToken] = useState("");
 
-  useEffect(() => {
-    const initalToken = getAuthToken()
-    setToken(initalToken)
-    const syncLogout = () =>{
-      const token = getAuthToken();
-      setToken(token);
-    }
-    window.addEventListener("storage",syncLogout)
-    return () =>{
-      window.removeEventListener("storage",syncLogout)
-    }
-  }, []);
-
-
-
-  
   return (
-    <div className="container">
+    <div className={classes.container}>
       {!state?.data ? (
-        <div className="widget">
-          <div className="name">
+        <div className={classes.widget}>
+          <div className={classes.name}>
             <h2>Генерировать</h2>
           </div>
           <form action={formAction}>
-            <div className="select-div">
-              <select name="card">
+            <div className={classes.select_div}>
+              <select name={classes.card}>
                 {cardOptions.map((option) => (
                   <option value={option.value} key={option.value}>
                     {option.label}
                   </option>
                 ))}
               </select>
-              <select name="manners">
+              <select name={classes.manners}>
                 {textManners.map((manner) => (
                   <option value={manner.value} key={manner.value}>
                     {manner.label}
@@ -54,32 +35,22 @@ function CreatePage() {
               </select>
             </div>
             <Names />
-            <div></div>
-            {state?.message && (
-              <div className="errors">
-                <p>{state.message}</p>
-              </div>
-            )}
-            {!token && (
-              <div className="errors">
-                <Link href="/login">Пожалуста войдите в аккаунт</Link>
-              </div>
-            )}
+            <div>
+              {state?.message && (
+                <div className={classes.errors}>
+                  <p>{state.message}</p>
+                </div>
+              )}
+            </div>
 
-            <div className="input-div">
+            <div className={classes.input_div}>
               <input
                 type="text"
                 placeholder="Опишите что вы хотите создать"
                 name="prompt"
                 required
               />
-              {token && (
-                <div className="div-btn">
-                  <button disabled={isPending}>
-                    {isPending ? "Загрузка..." : "Генерировать"}
-                  </button>
-                </div>
-              )}
+              <button disabled={isPending}>{isPending ? "Загрузка...":"Генерировать"}</button>
             </div>
           </form>
         </div>
