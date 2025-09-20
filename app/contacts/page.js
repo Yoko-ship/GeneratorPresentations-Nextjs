@@ -1,6 +1,4 @@
 import classes from "./page.module.css";
-
-import { getRandomImages } from "@/components/presentationConfig";
 export default function AboutUs() {
   return (
     <div className={classes.contacts}>
@@ -12,7 +10,6 @@ export default function AboutUs() {
         </p>
       </div>
 
-      {/* <button onClick={getRandomImages}>Test</button> */}
     </div>
   );
 }

@@ -33,8 +33,9 @@
     text-decoration: none;
     color: white;
 }
-.auth a{
-    color: #B3D73B;
+
+.signing{
+    color: #B3D73B !important;
 }
 .main{
     display: flex;

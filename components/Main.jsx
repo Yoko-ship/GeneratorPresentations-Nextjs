@@ -13,7 +13,7 @@ function Main() {
           <span>Выберите шаблон, добавьте текст, <br/>и получите стильную презентацию за несколько минут.</span>
           <div className={classes.buttons}>
           <button onClick={() => router.push('/make-present')}>START FOR FREE</button>
-            <button>LEARN MORE</button>
+            <button onClick={() => router.push("/contacts")}>LEARN MORE</button>
           </div>
         </div>
     </main>

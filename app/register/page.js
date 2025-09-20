@@ -1,7 +1,10 @@
-import RegisterPage from "./formHandler";
-export default async function Page() {
+import RegisterHanlder from '@/components/RegisterHanlder'
+import React from 'react'
 
+function page() {
   return (
-    <RegisterPage/>
-  );
+    <RegisterHanlder/>
+  )
 }
+
+export default page

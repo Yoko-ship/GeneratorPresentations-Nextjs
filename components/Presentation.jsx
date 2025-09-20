@@ -9,7 +9,6 @@ import { ImageConfig } from "./presentationConfig";
 function Presentation({ state }) {
   let pres = new PptxGenJS();
   pres.theme = { headFontFace: "Arial Light", bodyFontFace: "Arial" };
-  console.log(state.images[0])
   
   const dowload = async () => {
     const firstSlide = pres.addSlide();
@@ -29,7 +28,6 @@ function Presentation({ state }) {
       slides.background = background;
       slides.addText(slide.title, SlideConfig(1.5, 0.5, 23, pres));
       slides.addText(slide.description, SlideConfig(1.5, 2, 17, pres));
-      console.log(state.images[0])
       if (index === 1) {
         slides.addImage(ImageConfig(state.images[0]))
       }

@@ -1,0 +1,7 @@
+.profile{
+    display: flex;
+    justify-content: center;
+}
+.profile h1{
+    color: white;
+}
