@@ -68,7 +68,7 @@
 }
 .buttons button{
     padding: 0.7rem;
-    width: 30%;
+    width: 50%;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -92,4 +92,21 @@
     margin-top: 1rem;
     text-align: center;
     font-size: 1.3rem;
+}
+
+@media screen  and (max-width:960px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 50%;
+    }
+    .buttons button{
+        width: 100%;
+    }
+    /* .right form input{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    } */
 }

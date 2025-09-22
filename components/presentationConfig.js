@@ -20,9 +20,9 @@ export function SlideConfig(x, y, fontSize, pres) {
     align: pres.AlignH.center,
   };
 }
-export function ImageConfig(path){
+export function ImageConfig(url){
     return{
-        data:path,
+        path:url,
         type:"png",
           x: 2.5,
           y: 3.5,
