@@ -5,7 +5,7 @@ import classes from "./page.module.css"
 function page() {
   return (
     <div className={classes.signing}>
-      <h1>Sign in</h1>
+      <h1>Войти</h1>
       <SignInForm/>
     </div>
   )

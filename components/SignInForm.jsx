@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import classes from "@/app/signIn/page.module.css";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
@@ -26,39 +26,41 @@ function SignInForm() {
     }
   };
   return (
-    <main className={classes.main}>
-      <div className={classes.left}>
-        <Image
-          src={"/Group.svg"}
-          alt="todo-image"
-          width={282}
-          height={285}
-        ></Image>
-        <h3>Создавайте привлекательные презентации!</h3>
-        <p>Практично, быстро и бесплатно!</p>
-      </div>
-      <div className={classes.right}>
-        <GoogleButton />
-        <form onSubmit={formHanlder}>
-          <label>Почта</label>
-          <input type="email" placeholder="Почта" name="email" required />
-          <label>Пароль</label>
-          <input
-            type="password"
-            placeholder="Пароль"
-            required
-            name="password"
-            minLength={8}
-          />
-          <div className={classes.buttons}>
-            <Link href="/register">Создать аккаунт</Link>
-            <button type="submit">Подтвердить</button>
-          </div>
+    <Suspense>
+      <main className={classes.main}>
+        <div className={classes.left}>
+          <Image
+            src={"/Group.svg"}
+            alt="todo-image"
+            width={282}
+            height={285}
+          ></Image>
+          <h3>Создавайте привлекательные презентации!</h3>
+          <p>Практично, быстро и бесплатно!</p>
+        </div>
+        <div className={classes.right}>
+          <GoogleButton />
+          <form onSubmit={formHanlder}>
+            <label>Почта</label>
+            <input type="email" placeholder="Почта" name="email" required />
+            <label>Пароль</label>
+            <input
+              type="password"
+              placeholder="Пароль"
+              required
+              name="password"
+              minLength={8}
+            />
+            <div className={classes.buttons}>
+              <Link href="/register">Создать аккаунт</Link>
+              <button type="submit">Подтвердить</button>
+            </div>
 
-          {error && <p className={classes.error}>{error}</p>}
-        </form>
-      </div>
-    </main>
+            {error && <p className={classes.error}>{error}</p>}
+          </form>
+        </div>
+      </main>
+    </Suspense>
   );
 }
 
