@@ -76,13 +76,15 @@
 @media screen and  (max-width:700px) {
     .header ul{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         align-items: center;
     }
     .info_part{
         display: flex;
         align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
     .logo{
         display: none;
