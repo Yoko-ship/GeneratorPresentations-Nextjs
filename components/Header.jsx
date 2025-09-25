@@ -19,9 +19,6 @@ function Header() {
             <li>
               <Link href="/">Главное Меню</Link>
             </li>
-            <li>
-              <Link href="/contacts">О нас</Link>
-            </li>
             {!session.data ? (
               <>
                 <li className={classes.auth}>
