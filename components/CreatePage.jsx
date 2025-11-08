@@ -10,8 +10,6 @@ import Presentation from "./Presentation";
 function CreatePage() {
   const [state, formAction, isPending] = useActionState(WritePrompt, null);
 
-  console.log(state)
-
   return (
     <div className={classes.container}>
       {!state?.data ? (

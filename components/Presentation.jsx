@@ -11,7 +11,8 @@ function Presentation({ state }) {
   pres.theme = { headFontFace: "Arial Light", bodyFontFace: "Arial" };
   
   const dowload = async () => {
-    const firstSlide = pres.addSlide();
+    const firstSlide = pres.addSlide({
+    });
     let background = { path: getRandomImages() };
     firstSlide.background = background;
     firstSlide.addText(
@@ -26,17 +27,8 @@ function Presentation({ state }) {
     state.data.slides.forEach((slide, index) => {
       let slides = pres.addSlide();
       slides.background = background;
-      slides.addText(slide.title, SlideConfig(1.5, 0.5, 23, pres));
-      slides.addText(slide.description, SlideConfig(1.5, 2, 17, pres));
-      if (index === 1) {
-        slides.addImage(ImageConfig(state.images[0]))
-      }
-      if (index === 3) {
-        slides.addImage(ImageConfig(state.images[1]));
-      }
-      if (index === 5) {
-        slides.addImage(ImageConfig(state.images[2]));
-      }
+      slides.addText(slide.title, SlideConfig(1.5, 0.5, 21, pres));
+      slides.addText(slide.description, SlideConfig(1.5, 3.2, 18, pres));
     });
     await pres.writeFile({ fileName: "Presentation.pptx" });
   };
